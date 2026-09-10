@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: #020617;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+#menuButton {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+}
+
+#navLinks {
+    display: flex;
+    gap: 25px;
+}
+
+#navLinks a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navLinks a:hover {
+    color: #38bdf8;
+}
+
+body > h2 {
+    text-align: center;
+    padding: 30px;
+    color: #38bdf8;
+}
+
+section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #38bdf8;
+}
+
+#home h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+#typing-text {
+    color: #38bdf8;
+}
+
+#home p {
+    margin: 20px 0;
+}
+
+.button,
+.project-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 22px;
+    background: #38bdf8;
+    color: #020617;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.button:hover,
+.project-button:hover {
+    transform: translateY(-2px);
+}
+
+.profile-card {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #1e293b;
+    border-radius: 15px;
+}
+
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.skills-container,
+.learning-container,
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skill-card,
+.learning-card,
+.service-card,
+.project-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.skill-card h3,
+.learning-card h3,
+.service-card h3,
+.project-card h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    height: 10px;
+    background: #334155;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.html-progress {
+    width: 90%;
+    background: #f97316;
+}
+
+.css-progress {
+    width: 80%;
+    background: #3b82f6;
+}
+
+.js-progress {
+    width: 65%;
+    background: #facc15;
+}
+
+#projects {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.project-card {
+    text-align: left;
+}
+
+.project-tags {
+    margin-top: 15px;
+}
+
+.project-tags span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 4px;
+    background: #334155;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background: #1e293b;
+    color: white;
+}
+
+#contact textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #020617;
+    font-weight: bold;
+}
+
+.social-links {
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: #38bdf8;
+    margin: 10px;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #020617;
+}
+
+#backToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 50%;
+    background: #38bdf8;
+    color: #020617;
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+
+    #menuButton {
+        display: block;
+    }
+
+    #navLinks {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background: #020617;
+        padding: 20px;
+    }
+
+    #navLinks.active {
+        display: flex;
+    }
+
+    #home h1 {
+        font-size: 36px;
+    }
+
+    .skills-container,
+    .learning-container,
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+}
